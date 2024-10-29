@@ -10,10 +10,10 @@ https://www.pythonanywhere.com/
 
 
 Building the app on Pythonanywhere
-1. Get into web tab and create your first python app. Choose below options
+1. Get into web tab and create your first python app. Choose below options, with rest of the default options.
 (a)Flask framework
 (b) Python version 3.10
-With rest of the default options
+
 
 2. Navigate to files tab and under "mysite" directory you will find the pre-initialized python file "flask_app.py"
 
