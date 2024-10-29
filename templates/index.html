@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Request Example</title>
+</head>
+<body>
+
+    <!-- Paragraph element with default text -->
+    <p id="response">Answer comes here</p>
+
+    <!-- Text input box and submit button -->
+    <input type="text" id="inputBox" placeholder="Type your query">
+    <button id="submitButton">Submit</button>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const query = document.getElementById('inputBox').value;
+
+            // URL to the API endpoint with the query parameter
+            const url = `/api?query=${encodeURIComponent(query)}`;
+
+            // Fetch API to send GET request
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Displaying response data in the paragraph
+                    document.getElementById('response').innerText = data.answer || "No answer found";
+                })
+                .catch(error => {
+                    document.getElementById('response').innerText = "Error: " + error.message;
+                });
+        });
+    </script>
+
+</body>
+</html>

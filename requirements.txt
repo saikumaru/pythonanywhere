@@ -1,0 +1,5 @@
+langchain-huggingface==0.1.0
+langchain_community==0.3.3
+pypdf==4.0.1
+langchain-pinecone==0.2.0
+pinecone-notebooks==0.0.2rc3
